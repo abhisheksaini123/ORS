@@ -1,0 +1,17 @@
+.navbar-brand{
+    text-align:right;
+    font-size:20px; 
+}
+a{
+    height: fit-content;
+    width: fit-content;
+   
+}
+img{
+    padding: 2px;
+    width: 130px;
+    height: 70px;
+}
+nav{
+    background:rgb(184, 214, 251);
+}

@@ -1,0 +1,54 @@
+<div class="container">
+    <div *ngIf="success == true; then SUCC else FAIL"></div>
+    <ng-template #SUCC>
+        <p style="color:green">{{message}}</p>
+    </ng-template>
+    <ng-template #FAIL>
+        <p style="color:red">{{message}}</p>
+    </ng-template>
+
+    <h4 style="overflow:inherit;">
+        <div *ngIf="showEditable == true">UPDATE MARKSHEET...</div>
+        <div *ngIf="showEditable == false" class="glyphicon glyphicon-edit">Add MARKSHEET</div>
+        <!-- <span class="glyphicon glyphicon-edit">Add Marksheet</span> -->
+        <!-- <span class="glyphicon glyphicon-edit">Add Marksheet</span> -->
+    </h4>
+
+    <form>
+        <div class="form-group">
+            <label>Student Id</label>
+            <input [(ngModel)]="form.studentId" name="id" type="text" placeholder="Enter..." class="form-control"
+                required>
+            <td style="color: red;">{{inputError.studentId}}</td>
+            <label>Roll No</label>
+            <input [(ngModel)]="form.rollNo" name="rollNo" type="text" placeholder="Enter..." class="form-control"
+                required>
+            <td style="color: red;">{{inputError.rollNo}}</td>
+
+
+            <!-- <label>Name</label>
+            <input [(ngModel)]="form.name" name="name" type="text" placeholder="Enter..." class="form-control" required>
+            <td style="color: red;">{{inputError.name}}</td> -->
+
+            <label>Physics</label>
+            <input [(ngModel)]="form.physics" name="physics" type="text" placeholder="Enter..." class="form-control"
+                required>
+            <td style="color: red;">{{inputError.physics}}</td>
+
+            <label>Chemistry</label>
+            <input [(ngModel)]="form.chemistry" name="chemistry" type="text" placeholder="Enter..." class="form-control"
+                required>
+            <td style="color: red;">{{inputError.chemistry}}</td>
+
+            <label>Maths</label>
+            <input [(ngModel)]="form.maths" name="maths" type="text" placeholder="Enter..." class="form-control"
+                required>
+            <td style="color: red;">{{inputError.maths}}</td>
+            <br>
+            <button (click)="save()" class="btn btn-primary btn theme-btn">Save</button>
+            <!-- <td><button (click)="search()" class="btn btn-primary">Search</button></td> -->
+            <button (click)="clearError()" class="btn theme-btn-btn glyphicon glyphicon-refresh" type="reset"
+                value="clear"></button>
+        </div>
+    </form>
+</div>

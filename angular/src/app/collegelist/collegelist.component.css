@@ -1,0 +1,11 @@
+/* .table{
+        align-items: center;
+        transform: matrix(-50%, -50%);
+        left: 16%;
+        right: 16%;
+      position:fixed;
+   
+} */
+.table{
+  position:absolute;
+  align-items: center;}

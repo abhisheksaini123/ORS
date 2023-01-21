@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div *ngIf="success == true; then SUCC else FAIL"></div>
+
+    <ng-template #SUCC>
+        <p style="color:green">{{message}}</p>
+    </ng-template>
+
+    <ng-template #FAIL>
+        <p style="color:red;">{{message}}</p>
+    </ng-template>
+    <h1 style="overflow:inherit;">
+        <div *ngIf="showEditable == true">UPDATE USER...</div>
+        <div *ngIf="showEditable == false"class="glyphicon glyphicon-user">ADD USER</div>
+        <!-- <span class="glyphicon glyphicon-user">Registration Now</span> -->
+    </h1>
+
+
+    <form action="">
+        <div class="form-group">
+
+            <label>First Name:</label>
+            <span class="glyphicon glyphicon-person"></span>
+            <input [(ngModel)]="form.firstName" name="fname" type="text" placeholder="Enter First Name"
+                class="form-control" required>
+            <td style="color: red;">{{inputError.firstName}}</td>
+
+            <label>Last Name:</label>
+            <span class="glyphicon glyphicon-person"></span>
+            <input [(ngModel)]="form.lastName" name="lname" type="text" placeholder="Enter Last Name"
+                class="form-control" required>
+            <td style="color:red">{{inputError.lastName}}</td>
+
+            <label>Email Id:</label>
+            <span class="glyphicon glyphicon-user"></span>
+            <input [(ngModel)]="form.loginId" name="Id" type="text" placeholder="Enter Email" class="form-control"
+                required>
+            <td style="color:red">{{inputError.loginId}}</td>
+
+            <label>Password:</label>
+            <span class="glyphicon glyphicon-lock"></span>
+            <input [(ngModel)]="form.password" name="password" type="password" placeholder="Enter Password"
+                 class="form-control" required>
+            <td style="color:red">{{inputError.password}}</td>
+
+            <label>Role Id:</label>
+            <span class="glyphicon glyphicon-log-in"></span>
+            <input [(ngModel)]="form.roleId" name="id" type="text" placeholder="Enter Role Id " class="form-control"
+                required>
+            <td style="color:red">{{inputError.roleId}}</td>
+            <br>
+            
+            <button *ngIf="showEditable == true" (click)="save()" class="btn btn-primary btn theme-btn">UPDATE</button>
+            <button *ngIf="showEditable == false" (click)="save()" class="btn btn-primary btn theme-btn">Register</button>
+            <!-- <button (click)="clearError()" class="btn theme-btn-btn glyphicon glyphicon-refresh" type="reset" value="clear"></button> -->
+            <!-- <button (click)="login()" class="btn btn-primary">Login</button> -->
+        </div>
+    </form>
+</div>

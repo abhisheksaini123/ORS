@@ -1,0 +1,15 @@
+ .table{
+    position:absolute;
+    align-items: center;
+    /* left: 16%; */
+  }
+ 
+  /* .center{
+    display: flex;
+    justify-content: center;
+    background-position: center center;
+    width:80%; 
+    margin-left:27%; 
+    margin-right:16%; 
+    height:200px; 
+  } */

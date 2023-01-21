@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: linear-gradient(190deg, #e18ffa, #aafdf186);
+  border-radius: 7px;
+  box-shadow: 10px 15px 25px rgba(7, 7, 7, 0.7);
+  border-bottom: 10px solid #bb9bb3;
+}
+
+.container form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.theme-btn{
+  background-color: rgb(64, 49, 229);
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+}
+.theme-btn-btn{
+  border: hidden0;
+  width: 100%;
+  margin-top: 7px;
+  color: rgb(0, 0, 0);
+}

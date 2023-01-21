@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h1 style="overflow:inherit;"><span class="glyphicon glyphicon-user">Login</span></h1>
+    <P style="color: red;">{{message}}</P>
+    <form action="">
+        <div class="form-group">
+            <span class="glyphicon glyphicon-user"></span>
+            <label>Email ID:</label>
+
+            <input [(ngModel)]="form.loginId" name="loginId" type="email" placeholder="Enter Email"
+                class="form-control" required>
+            <td style="color: red;">{{inputError.loginId}}</td>
+            <span class="glyphicon glyphicon-lock"></span>
+            <label>Password:</label>
+            <input [(ngModel)]="form.password" name="password" type="password" placeholder="Enter Password"
+                class="form-control" required>
+            <td style="color:red">{{inputError.password}}</td>
+        </div>
+        <button (click)="login()" class="btn btn-primary btn theme-btn">Login</button><br>
+        <button (click)="clearError()" class="btn theme-btn-btn glyphicon glyphicon-refresh" type="reset" value="clear"></button>
+        <!-- <button class="btn btn-primary" type="reset" value="clear">Clear</button> -->
+    </form>
+    <br>
+</div>
+<!-- <button onclick="window.print()">Print this page</button> -->
